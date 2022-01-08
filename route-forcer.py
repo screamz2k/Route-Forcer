@@ -55,9 +55,9 @@ def check_dir(_url, words, library, useragent="Mozilla/5.0 (Windows NT 10.0; Win
             elif 300 >= code < 400:
                 console.print(f"[{code}] /{word} Redirection", style="red")
             elif 400 >= code < 500:
-                console.print(f"[{code}] /{word} ", style="yellow")
+                console.print(f"[{code}] /{word} Client Error", style="yellow")
             elif 500 <= code:
-                console.print(f"[{code}] /{word}", style="blue")
+                console.print(f"[{code}] /{word} Server Error", style="blue")
             else:
                 console.print(f"[{code}] /{word}")
             found_subs.append(f"{code} | /{word} \n")
